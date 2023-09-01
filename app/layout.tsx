@@ -1,10 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
 
-// eslint-disable-next-line camelcase
-import { Open_Sans } from 'next/font/google'
+import { Open_Sans as openSans } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
 
-const font = Open_Sans({ subsets: ['latin'] })
+const font = openSans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Discord Clone',
@@ -17,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={font.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={font.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   )
 }
