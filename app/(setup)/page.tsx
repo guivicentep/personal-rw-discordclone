@@ -24,5 +24,3 @@ const SetupPage = async () => {
 }
 
 export default SetupPage
-
-// 2:20:43
