@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
-import { ChanelType } from '@prisma/client'
+import { ChannelType } from '@prisma/client'
 
 import { currentProfile } from '@/lib/current-profile'
 import { db } from '@/lib/db'
@@ -39,13 +39,13 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
   })
 
   const textChannels = server?.channels.filter(
-    (channel) => channel.type === ChanelType.TEXT,
+    (channel) => channel.type === ChannelType.TEXT,
   )
   const audioChannels = server?.channels.filter(
-    (channel) => channel.type === ChanelType.AUDIO,
+    (channel) => channel.type === ChannelType.AUDIO,
   )
   const videoChannels = server?.channels.filter(
-    (channel) => channel.type === ChanelType.VIDEO,
+    (channel) => channel.type === ChannelType.VIDEO,
   )
   const members = server?.members.filter(
     (member) => member.profileId !== profile.id,
