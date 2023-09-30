@@ -177,5 +177,3 @@ export const CreateChannelModal = () => {
     </Dialog>
   )
 }
-
-// 7:02:22
