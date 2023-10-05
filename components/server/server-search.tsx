@@ -115,5 +115,3 @@ export const ServerSearch = ({ data }: ServerSearchProps) => {
     </>
   )
 }
-
-// 6:06:57
